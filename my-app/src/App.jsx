@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate, Outlet } from 'react-router-dom';
 import Login from './pages/Login';
 import Admin from './pages/admin/Dashboard';
 import AdminStaff from './pages/admin/Staff';
@@ -15,6 +15,11 @@ import Prescriptions from './pages/patient/Prescriptions';
 import Records from './pages/patient/Records';
 import Messages from './pages/patient/Messages';
 import Profile from './pages/patient/Profile';
+import Secretaire from './pages/secretaire';
+import SecretaireAppointments from './pages/secretaire/Appointments';
+import SecretairePatients from './pages/secretaire/Patients';
+import SecretaireMessages from './pages/secretaire/Messages';
+import SecretaireTasks from './pages/secretaire/Tasks';
 
 function App() {
   return (
@@ -42,6 +47,13 @@ function App() {
         <Route path="/patient/records" element={<Records />} />
         <Route path="/patient/messages" element={<Messages />} />
         <Route path="/patient/profile" element={<Profile />} />
+        
+        {/* Secretaire Routes Added */}
+        <Route path="/secretaire" element={<Secretaire />} />
+        <Route path="/secretaire/appointments" element={<SecretaireAppointments />} />
+        <Route path="/secretaire/patients" element={<SecretairePatients />} />
+        <Route path="/secretaire/messages" element={<SecretaireMessages />} />
+        <Route path="/secretaire/tasks" element={<SecretaireTasks />} />
         
         {/* Redirect root to login page */}
         <Route path="/" element={<Navigate to="/login" replace />} />

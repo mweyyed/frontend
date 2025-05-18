@@ -93,14 +93,19 @@ const AdminSidebar = () => {
         </ul>
       </nav>
 
-      {/* Profile */}
-      <div className="mt-auto">
-        <button className="w-12 h-12 rounded-xl flex items-center justify-center text-gray-400 hover:text-indigo-600 hover:bg-indigo-50 transition-colors">
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-          </svg>
-        </button>
-      </div>
+      {/* Logout Button */}
+      <button 
+        onClick={() => { window.location.href = '/login'; }}
+        className="w-12 h-12 mt-4 rounded-xl flex items-center justify-center text-gray-400 hover:text-red-600 hover:bg-red-100 group relative transition-colors duration-200"
+        title="Logout"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+        </svg>
+        <span className="absolute left-full ml-4 px-3 py-1.5 bg-gray-800 text-white text-xs font-medium rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-in-out whitespace-nowrap z-50">
+          Logout
+        </span>
+      </button>
     </div>
   );
 };
