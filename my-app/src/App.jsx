@@ -20,6 +20,8 @@ import SecretaireAppointments from './pages/secretaire/Appointments';
 import SecretairePatients from './pages/secretaire/Patients';
 import SecretaireMessages from './pages/secretaire/Messages';
 import SecretaireTasks from './pages/secretaire/Tasks';
+import RoleCreatePage from './pages/admin/roles';
+import PermissionCreatePage from './pages/admin/permissions';
 
 function App() {
   return (
@@ -31,6 +33,8 @@ function App() {
         <Route path="/admin" element={<Admin />} />
         <Route path="/admin/staff" element={<AdminStaff />} />
         <Route path="/admin/departments" element={<AdminDepartments />} />
+        <Route path="/admin/roles" element={<RoleCreatePage user={{ role: 'admin' }} />} />
+        <Route path="/admin/permissions" element={<PermissionCreatePage user={{ role: 'admin' }} />} />
         
         {/* Doctor Routes */}
         <Route path="/doctor" element={<Doctor />} />

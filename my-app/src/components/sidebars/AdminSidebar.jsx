@@ -36,6 +36,24 @@ const AdminSidebar = () => {
       label: 'Departments'
     },
     {
+      path: '/admin/roles',
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zm2 14H6a2 2 0 01-2-2v-2a6 6 0 0112 0v2a2 2 0 01-2 2z" />
+        </svg>
+      ),
+      label: 'Roles'
+    },
+    {
+      path: '/admin/permissions',
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-3-3v6m9-6a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      ),
+      label: 'Permissions'
+    },
+    {
       path: '/admin/patients',
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
