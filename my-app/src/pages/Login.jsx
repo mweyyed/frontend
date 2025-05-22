@@ -76,28 +76,13 @@ const Login = () => {
                   </button>
                 </div>
               </div>
-              <div className="flex items-center gap-2">
-                <input
-                  type="checkbox"
-                  name="rememberMe"
-                  id="rememberMe"
-                  checked={formData.rememberMe}
-                  onChange={handleChange}
-                  className="w-4 h-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500"
-                />
-                <label htmlFor="rememberMe" className="text-sm text-gray-600">Remember me</label>
-              </div>
+              
               <button
                 type="submit"
                 className="w-full py-3 px-4 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg transition-colors"
               >
                 Sign In
               </button>
-              <div className="text-center">
-                <a href="#" className="text-sm text-indigo-600 hover:underline">
-                  Forgot password?
-                </a>
-              </div>
             </form>
           </div>
           <div className="flex-1 flex justify-center items-center p-8">

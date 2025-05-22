@@ -44,14 +44,18 @@ export default function RoleCreatePage({ user }) {
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">Permissions</label>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <select
+                multiple
+                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 min-h-[200px]"
+                size="8"
+              >
                 {permissionsList.map((perm) => (
-                  <label key={perm} className="flex items-center gap-2 text-gray-700">
-                    <input type="checkbox" value={perm} className="accent-indigo-600" />
+                  <option key={perm} value={perm} className="py-1">
                     {perm}
-                  </label>
+                  </option>
                 ))}
-              </div>
+              </select>
+              <p className="mt-1 text-sm text-gray-500">Hold Ctrl (Windows) or Command (Mac) to select multiple permissions</p>
             </div>
             <div className="pt-4 text-right">
               <button type="submit" className="px-6 py-2 bg-indigo-600 text-white rounded-lg font-semibold hover:bg-indigo-700 transition-colors">Create Role</button>
