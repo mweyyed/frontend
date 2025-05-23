@@ -13,6 +13,7 @@ import Appointments from './pages/patient/Appointments';
 import Prescriptions from './pages/patient/Prescriptions';
 import Records from './pages/patient/Records';
 import Profile from './pages/patient/Profile';
+import MedicalHistory from './pages/patient/MedicalHistory';
 import Secretaire from './pages/secretaire';
 import SecretaireAppointments from './pages/secretaire/Appointments';
 import SecretairePatients from './pages/secretaire/Patients';
@@ -49,6 +50,7 @@ function App() {
         <Route path="/patient/prescriptions" element={<Prescriptions />} />
         <Route path="/patient/records" element={<Records />} />
         <Route path="/patient/profile" element={<Profile />} />
+        <Route path="/patient/medical-history" element={<MedicalHistory />} />
         
         {/* Secretaire Routes Added */}
         <Route path="/secretaire" element={<Secretaire />} />
